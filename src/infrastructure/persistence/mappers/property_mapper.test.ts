@@ -45,7 +45,7 @@ describe("Property Mapper Entity", () => {
     // O mapper chama o construtor de Property, que deve lançar o erro
     expect(() => {
       PropertyMapper.toDomain(entity);
-    }).toThrow("O nome é obrigatório");
+    }).toThrow("O nome da propriedade é obrigatório.");
   });
 
   it("deve lançar erro quando o número máximo de hóspedes for inválido na entidade", () => {
@@ -58,7 +58,7 @@ describe("Property Mapper Entity", () => {
     // Act & Assert
     expect(() => {
       PropertyMapper.toDomain(entity);
-    }).toThrow("O número máximo de hóspedes deve ser maior que zero");
+    }).toThrow("A capacidade máxima deve ser maior que zero.");
   });
 
   it("deve converter Property para PropertyEntity corretamente", () => {
